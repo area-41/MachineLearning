@@ -16,7 +16,7 @@ Tabela 1: Visão geral das métricas usadas para avaliar métodos de classifica�
 
 
 o ARQUIVO com o Codigo abaixo:
-
+<p><blockquote>
 import numpy as np
 
 
@@ -63,12 +63,12 @@ def get_confusion_matrix(reais, preditos, labels):
     ])
 
 
-matrix = get_confusion_matrix(reais=real, preditos=predicao, labels=[1, 0])
-print(matrix)
-TP = matrix[0][0]
-FP = matrix[0][1]
-FN = matrix[1][0]
-TN = matrix[1][1]
+matrix = get_confusion_matrix(reais=real, preditos=predicao, labels=[1, 0])<br/>
+print(matrix)<br/>
+TP = matrix[0][0]<br/>
+FP = matrix[0][1]<br/>
+FN = matrix[1][0]<br/>
+TN = matrix[1][1]<br/>
 
 print('Acuracia (TP+TN/(TP+FP+TN+FN)): ')
 print(TP+TN/(TP+FP+TN+FN))
@@ -87,9 +87,37 @@ print(precisao)
 print('F-score (2x((precisaoXsensibilidade)/(precisao+sensibilidade)): ')
 print(2*(precisao*sensibilidade/(precisao+sensibilidade)))
 
+</blockquote></p><br/>
+
+RESULTADO:
+
+[[5 1]
+ [2 5]]
+ <br/>
+Acuracia (TP+TN/(TP+FP+TN+FN)): 
+5.384615384615385
+<br/>
+Sensibilidade (TP/(TP+FN)): 
+0.7142857142857143
+<br/>
+Especificidade (TN/(TN+FP)): 
+0.8333333333333334
+<br/>
+Precisão (TP/(TP+FP)): 
+0.8333333333333334
+<br/>
+F-score (2x((precisaoXsensibilidade)/(precisao+sensibilidade)): 
+0.7692307692307692
+<br/>
+
+Process finished with exit code 0
+
+<br/><br/>
 
 
-*** codigo retirado de uma versao disponivel na internet:
+##### REFERENCIAS<br/>
+
+*** codigo retirado de uma versao disponivel na internet:<br/>
 https://medium.com/data-hackers/entendendo-o-que-%C3%A9-matriz-de-confus%C3%A3o-com-python-114e683ec509
-
+<br/>
 https://diegomariano.com/metricas-de-avaliacao-em-machine-learning/#Especificidade
